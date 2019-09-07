@@ -6,6 +6,7 @@ This is the code repository for work done during my internship at GREYC laborato
 
 The file 'key to models in the files.pdf' has a descriptive list of all trained models and their corresponding code files. 
 
+
 ### *Directory structuring required to run any main file* :
 
 1. The main file as mentioned in the key 
@@ -19,12 +20,14 @@ The file 'key to models in the files.pdf' has a descriptive list of all trained 
     * 'cifar10_kuangliu/data/' for cifar 10 dataset
     * 'cifar100/data' for cifar 100 dataset 
     
+    
 ### *A few pointers* :
 
 1. The dataset gets downloaded automatically if it is not present already
 2. The code is flexible wrt to resnet type, dataset type (cifar10/100) and most hyper parameters; the same code can be used to train a range of models by passing the correct training arguments  
 3. For each model trained on different Resnet/dataset/initialisation strategy/other hyper parameter combinations, the code differentiates between checkpoints/logs of different models by using model specific names where the checkpoints/logs get saved
 4. Any model can be tested on the trained checkpoints by passing the ‘-e’ argument and specifying the absolute path in the ’test_checkpoint’ argument 
+
 
 ### *References* :
 
