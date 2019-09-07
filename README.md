@@ -4,7 +4,8 @@
 
 This is the code repository for work done during my internship at GREYC laboratory from 3st June - 28th August, 2019 under the mentorship of Dr. Frederic Jurie, Dr. Alexis Lechervy and Shivang Aggarwal. The repository contains code implementation of various experiments conducted by applying gating mechanisms on Resnets for cifar 10 and cifar 100 datasets.   
 
-The file 'key to models in the files.pdf' has a descriptive list of all trained models and their corresponding code files. 
+> The file 'key to models in the files.pdf' has a descriptive list of all trained models and their corresponding code files. 
+> The file 'logs_key.pdf' describes the naming convention used for naming tensorboard logs and saved checkpoints. The logs have been shared as a separate google drive link. 
 
 
 ### *Directory structuring required to run any main file* :
