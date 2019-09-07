@@ -1,0 +1,60 @@
+In this document, block refers to the entire B3 and layer refers to the individual layers inside each blocks B1, B2, B3. i.e. there are 18 layers inside each block in Resnet 110 and Resnet 164. Gates are either at the block level or at each layer which is actually refers to a residual unit (like in the paper identity mappings for deep residual networks by Kaiming He et al.)
+Unless mentioned, for cifar type Resnets, Resnet 110 baseline has been used to train cifar 10 and Resnet 164 has been used for cifar 100
+  
+
+Block level gate, all model files are inside the directory /models/
+[x]Identity_mappings_main.py - resnet and preresnet baselines 
+* resnet.py
+* preresnet.py
+[x]Identity_mappings_main_modl3.py - use the l2 norm of g as regularisation loss term
+* resnet_modl3.py
+[x]Identity_mappings_main_modl3cel.py - use cross entropy loss of g as regularisation term, use a softmax to give 2 way skip/not_skip outputs g1 and g2 from the gate FC block 
+* resnet_modl3cel.py
+[x]Identity_mappings_main_modl3_entropy.py - apply gate that uses entropy as g, with no extra loss term 
+* resnet_entropy.py
+[x]Identity_mappings_main_gate_classifier.py - apply gate that uses entropy as g; the gate has a classifier used to update the layers of the gate FC (The model that worked)
+* resnet_gate_classifier.py
+[x]identity_mappings_main_gate_classifier_val.py, to validate performance of the working model on a validation set. 
+[x]identity_mappings_main_gate_classifier_dlr.py, to use a different gate learning rate decay mechanism 
+[x]identity_mappings_main_gate_classifier_b3b2.py - use gate over both blocks B3 and B2 (gate type is the model that worked)
+* resnet_gate_classifier_b3b2
+[x]identity_mappings_main_gate_classifier_c100res110.py - train the model that worked with a resnet 110 backbone on cifar 100
+* resnet_gate_classifier.py
+
+
+Layer level gate
+[x]Identity_mappings_main_gating.py - exclusive and shortcut gating reproduction of paper results, no self modification 
+* resnet_exclusive_gating.py
+* resnet_shortcut_gating.py 
+[x]Identity_mappings_main_gateloss.py - exclusive and shortcut gating with l2 norm of g loss 
+* resnet_ex_loss.py
+* resnet_sh_loss.py
+[x]Identity_mappings_main_gateloss_cel.py - exclusive gating with cross entropy loss. Multiple types of gates and loss implementations
+* resnet_exg_1by1element.py
+* resnet_exg_1by1tube.py
+* resnet_exg_3by3tube.py
+
+Miscellaneous 
+[x]identity_mappings_main_gate_classifier_bestval.py, compares performance on different train/val split ratios with other parameters fixed. 
+* resnet_gate_classifier.py
+[x]identity_mappings_main_gate_classifier_visualiseg.py , To visualise the distribution of g value of samples (for the working model)
+* resnet_gate_classifier_visualiseg.py, 
+
+
+Older Imagenet type Resnet 34 models files 
+Inside the directory - imagenet_type_res34/
+[x]main_baseline.py, resnet_normal.py - to reproduce Cifar 10 benchmarks using Imagenet type Res 34 
+[x]main_new_mod_l3.py, resnet.py - use the l2 norm of g as loss; gate is over the 3rd block of Resnet 34 (it has 4 blocks)
+[x]main_new_modl3_entropy.py, resnet_entropy.py - use entropy as g for the gate over 3rd block of Resnet 34, no extra loss term 
+[x]main_old_kuangliu.py - reproducing some previous benchmarks in 1st 2 weeks of intern 
+
+
+
+
+
+
+
+
+
+
+
