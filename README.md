@@ -1,5 +1,5 @@
 # GREYC-Internship
-## Memorization and Generalization in Deep CNNs Using Soft Gating Mechanisms 
+## Memorization and Generalization in Deep Neural networks  
 
 
 This is the code repository for work done during my internship at GREYC laboratory from 3rd June - 28th August, 2019 under the mentorship of Prof. Frederic Jurie, Dr. Alexis Lechervy and Shivang Aggarwal. The repository contains code implementation of various experiments conducted by applying gating mechanisms on ResNets for Cifar 10 and Cifar 100 datasets.   
