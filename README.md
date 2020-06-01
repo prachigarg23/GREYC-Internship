@@ -1,12 +1,12 @@
 # GREYC-Internship
-## Gating mechanisms in CNNs inspired by memorization and generalization
+## Memorization and Generalization in Deep CNNs Using Soft Gating Mechanisms 
 
 
 This is the code repository for work done during my internship at GREYC laboratory from 3rd June - 28th August, 2019 under the mentorship of Prof. Frederic Jurie, Dr. Alexis Lechervy and Shivang Aggarwal. The repository contains code implementation of various experiments conducted by applying gating mechanisms on ResNets for Cifar 10 and Cifar 100 datasets.   
 
-> The file 'key to models in the files.pdf' has a descriptive list of all trained models and their corresponding code files. 
+> The file 'key to models in the files.pdf' has a descriptive list of all trained model architectures and their corresponding code files. 
 
-> The file 'logs_key.pdf' describes the naming convention used for naming tensorboard logs and saved checkpoints. The logs have been shared as a separate google drive link. 
+> The file 'logs_key.pdf' describes the naming convention used for naming tensorboard logs and saved checkpoints based on the architectural designs used. 
 
 
 ### *Directory structuring required to run any main file* :
