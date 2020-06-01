@@ -19,26 +19,26 @@ This is the code repository for work done during my internship at GREYC laborato
 4. All baselines (for training from baseline initialisation) are placed inside the directory /baselines 
 5. Please ensure that the directory for saving trained checkpoints and tensor board logs is present, if not, create it before running the code
 6. Change the ‘data_dir’ in the code and specify the directory where you want to download the dataset. In my setup, I had:
-    * 'cifar10_kuangliu/data/' for cifar 10 dataset
+    * 'cifar10/data/' for cifar 10 dataset
     * 'cifar100/data' for cifar 100 dataset 
     
     
 ### *A few pointers* :
 
 1. The dataset gets downloaded automatically if it is not present already
-2. The code is flexible wrt to resnet type, dataset type (cifar10/100) and most hyper parameters; the same code can be used to train a range of models by passing the correct training arguments  
+2. The code is flexible wrt to resnet type, dataset type (cifar10/100) and most hyper parameters; the same code can be used to train a range of models by setting the correct flags   
 3. For each model trained on different Resnet/dataset/initialisation strategy/other hyper parameter combinations, the code differentiates between checkpoints/logs of different models by using model specific names where the checkpoints/logs get saved
-4. Any model can be tested on the trained checkpoints by passing the ‘-e’ argument and specifying the absolute path in the ’test_checkpoint’ argument 
+4. Any model can be tested on the trained checkpoints by passing the ‘-e’ argument and specifying the absolute path to the trained model weights in the ’test_checkpoint’ argument 
 
 
 ### *References* :
 
-The code for main files and imagenet type res34 was initially adapted from these 3 GitHub repositories - 
+The code for imagenet type ResNet 34 was initially adapted from these 3 GitHub repositories - 
 * https://github.com/kuangliu/pytorch-cifar
 * https://github.com/akamaster/pytorch_resnet_cifar10
 * https://github.com/chengyangfu/pytorch-vgg-cifar10
 
-The code for cifar type resnets was adapted from -
+The code for cifar type ResNets was adapted from -
 * https://github.com/facebook/fb.resnet.torch
 * https://github.com/pytorch/vision/blob/master/torchvision/models/resnet.py
 
