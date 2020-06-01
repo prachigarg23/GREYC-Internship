@@ -19,7 +19,7 @@ This is the code repository for work done during my internship at GREYC laborato
 4. All baselines (for training from baseline initialisation) are placed inside the directory /baselines 
 5. Please ensure that the directory for saving trained checkpoints and tensor board logs is present, if not, create it before running the code
 6. Change the ‘data_dir’ in the code and specify the directory where you want to download the dataset. In my setup, I had:
-    * 'cifar10/data/' for cifar 10 dataset
+    * 'cifar10_kuangliu/data/' for cifar 10 dataset
     * 'cifar100/data' for cifar 100 dataset 
     
     
