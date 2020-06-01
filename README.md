@@ -1,5 +1,5 @@
 # GREYC-Internship
-## Memorization and Generalization in Deep Neural networks  
+## Memorization and Generalization in Deep Neural Networks  
 
 **NOTE :** Please refer to https://github.com/prachigarg23/Memorisation-and-Generalisation-in-Deep-CNNs-Using-Soft-Gating-Mechanisms for a brief description of the project and simplified code repository of important files.   
 
